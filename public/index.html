@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="Hanplat">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="assets/angular/angular.min.js"></script>
+    <script src="assets/angular-route/angular-route.min.js"></script>
+    <script src="assets/angularfire/dist/angularfire.min.js"></script>
+    <script src="assets/firebase/firebase.js"></script>
+
+    <script src="src/hanplat/errand/Errand.js"></script>
+    <script src="src/hanplat/errand/controllers/errandPostCtrl.js"></script>
+    <script src="src/hanplat/errand/services/errandModel.js"></script>
+    <script src="src/hanplat/errand/controllers/errandExposeCtrl.js"></script>
+    <script src="src/hanplat/errand/controllers/errandDetailCtrl.js"></script>
+    <script src="src/hanplat/errand/controllers/errandBidCtrl.js"></script>
+
+    <script src="src/hanplat/login/Login.js"></script>
+    <script src="src/hanplat/login/controllers/loginCtrl.js"></script>
+    <script src="src/hanplat/login/services/loginService.js"></script>
+    <script src="src/hanplat/Hanplat.js"></script>
+    <script src="src/hanplat/routes.js"></script>
+
+    <script src="src/hanplat/users/Users.js"></script>
+    <script src="src/hanplat/users/services/userService.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">H_PLAT</a>
+          <a class="navbar-brand" href="#">User</a>
+<div ng-controller="loginController as loginCtrl">
+  <ul class="nav navbar-nav navbar-right">
+    <p>User : {{loginCtrl.currentUser.email}}</p>
+    <label>이메일<input ng-model="loginCtrl.email" class="form-control" type="email" /></label>
+    <label>비밀번호<input ng-model="loginCtrl.password" class="form-control" type="password" /></label>
+    <button ng-click="loginCtrl.signup(loginCtrl.email)" class="btn btn-info" type="button">가입</button>
+    <button ng-click="loginCtrl.login(loginCtrl.email)" class="btn btn-warning" type="button">로그인</button>
+  </ul>
+</div>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#/errand">심부름</a>
+          <a class="navbar-brand" href="#">잡담</a>
+          <a href="#/errand_post"><button class="btn btn-primary"type="button" name="button">심부름 등록</button></a>
+        </div>
+      </div>
+    </nav>
+    <div ng-view></div>
+  </body>
+</html>

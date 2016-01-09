@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>입찰</th>
+            <th>평균입찰</th>
+            <th>예산</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>-</td>
+            <td>-원</td>
+            <td>{{errandDetailCtrl.item.budget}}</td>
+            <td><a href="#/errand_bid/{{errandDetailCtrl.item.uniqueId}}"><button class="btn btn-success" type="button">입찰하기</button></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="well">
+        <h1>{{errandDetailCtrl.item.title}}</h1>
+        <hr/>
+        <p>{{errandDetailCtrl.item.description}}</p>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <h1>심부름 등록자</h1>
+      <h5>{{errandDetailCtrl.item.maker}}</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>심부름꾼 ()</th>
+            <th>평판</th>
+            <th>입찰(금액)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="bidder in errandDetailCtrl.item.bidders">
+            <td>{{bidder.bidderId}}</td>
+            <td>-</td>
+            <td>{{bidder.money}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <h1>1.심부름 카테고리 선택</h1>
+    <select ng-model="errandPostCtrl.category" class="form-control">
+    <option>과외,팁 전수</option>
+    <option>힘 쓰는 일</option>
+    <option>기타</option>
+    </select>
+  <h1>2.심부름 이름을 입력해주세요.</h1>
+    <input ng-model="errandPostCtrl.title" class="form-control" type="text" placeholder="심부름 이름"/>
+  <h1>3.심부름을 설명해주세요.</h1>
+    <textarea ng-model="errandPostCtrl.description" class="form-control" rows="5" placeholder="심부름에 대해서 설명해주세요.(어떤 심부름을 해야하는지..)"></textarea>
+  <h1>4.예산은 얼마인가요?</h1>
+    <input ng-model="errandPostCtrl.budget" class="form-control" type="text" />
+  <h1>5.옵션</h1>
+    <label>특정날짜?</label><input ng-model="errandPostCtrl.desiredDate" class="form-control" type="text" />
+    <label>특정위치?</label><input ng-model="errandPostCtrl.desiredLocation" class="form-control" type="text" />
+  <hr/>
+  <a href="#/errand"><button ng-click="errandPostCtrl.registerErrand()" class="btn btn-danger" type="button">등록</button></a>
+</div>

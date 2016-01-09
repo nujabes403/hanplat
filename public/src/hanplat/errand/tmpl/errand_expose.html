@@ -1,0 +1,43 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">과외 팁전수 x</a>
+      <a class="navbar-brand" href="#">힘 쓰는 일 x</a>
+      <a class="navbar-brand" href="#">기타 x</a>
+    </div>
+    <div class="input-group">
+      <input class="form-control" type="text" />
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>심부름</th>
+        <th>입찰여부</th>
+        <th>유형</th>
+        <th>원하는 날짜</th>
+        <th>예산</th>
+        <th>위치</th>
+        <th>-</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="errandItem in errandExposeCtrl.errandArray">
+        <td><a href="#/errand/{{errandItem.uniqueId}}">{{errandItem.title}}</a></td>
+        <td>명 입찰중</td>
+        <td>{{errandItem.category}}</td>
+        <td>{{errandItem.desiredDate}}</td>
+        <td>{{errandItem.budget}}</td>
+        <td>{{errandItem.desiredLocation}}</td>
+        <td>
+          <button class="btn btn-danger" ng-click="errandExposeCtrl.deleteItem(errandItem.maker,errandItem.uniqueId)" type="button" >삭제</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

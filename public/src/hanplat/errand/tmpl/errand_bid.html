@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>심부름 명 : {{errandBidCtrl.item.title}}</h1>
+      <hr/>
+      <h3>자기소개</h3>
+      <textarea ng-model="errandBidCtrl.bidderDescription" placeholder="입찰에 성공하기 위하여 심부름에 자신이 적합한 인재임을 서술해주세요." cols="70" rows="5"></textarea>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <label>금액:</label>
+      <input ng-model="errandBidCtrl.money" class="form-control" type="text"/>
+      <a href="#/errand/{{errandBidCtrl.routeId}}"<button ng-click="errandBidCtrl.postBid()" class="btn btn-success" type="button">입찰하기</button></a>
+    </div>
+  </div>
+</div>
