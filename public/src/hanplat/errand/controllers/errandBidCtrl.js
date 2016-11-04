@@ -1,3 +1,9 @@
+/**
+ *
+ * @author     Hoonil Kim(nujabes403@gmail.com)
+ * @version    1.0.0
+ */
+
 angular.module('errand')
   .controller('errandBidController',function($scope,errandModel,loginService,$routeParams){
     var errandBidCtrl = this;
@@ -12,7 +18,7 @@ angular.module('errand')
     });
 
     errandBidCtrl.routeId = $routeParams.id;
-    
+
     errandBidCtrl.postBid = function(){
       errandModel.postBid({
         key:$routeParams.id,

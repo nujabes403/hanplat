@@ -1,3 +1,9 @@
+/**
+ *
+ * @author     Hoonil Kim(nujabes403@gmail.com)
+ * @version    1.0.0
+ */
+
 angular.module('errand')
   .controller('errandDetailController',function($scope,errandModel,$routeParams){
     var errandDetailCtrl = this;

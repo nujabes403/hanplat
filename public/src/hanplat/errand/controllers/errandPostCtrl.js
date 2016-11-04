@@ -1,3 +1,9 @@
+/**
+ *
+ * @author     Hoonil Kim(nujabes403@gmail.com)
+ * @version    1.0.0
+ */
+
 angular.module('errand')
   .controller('errandPostController',function($scope,loginService,errandModel,userService){
     var errandPostCtrl = this;

@@ -1,6 +1,17 @@
+/**
+ *
+ * @author     Hoonil Kim(nujabes403@gmail.com)
+ * @version    1.0.0
+ */
+
 angular.module('Hanplat')
   .config(function($routeProvider){
     $routeProvider
+    .when('/',{
+      templateUrl:'src/hanplat/errand/tmpl/errand_expose.html',
+      controller:'errandExposeController',
+      controllerAs:'errandExposeCtrl'
+    })
     .when('/errand',{
       templateUrl:'src/hanplat/errand/tmpl/errand_expose.html',
       controller:'errandExposeController',

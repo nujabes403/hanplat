@@ -1,3 +1,9 @@
+/**
+ *
+ * @author     Hoonil Kim(nujabes403@gmail.com)
+ * @version    1.0.0
+ */
+
 angular.module('login')
   .controller('loginController',function($scope,loginService){
     var loginCtrl = this;
@@ -11,7 +17,7 @@ angular.module('login')
     loginCtrl.login = function(){
       loginService.login(loginCtrl.email,loginCtrl.password);
     }
-    
+
     // 'loginComplete' event Listen
     $scope.$on('loginComplete',function(e,data){
       // reflect loginCtrl.currentUser changed to view
